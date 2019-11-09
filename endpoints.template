@@ -1,0 +1,5 @@
+endpoints:
+  ubuntu-18.04-default-squash:
+    path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
+    files:
+    - filesystem.squashfs

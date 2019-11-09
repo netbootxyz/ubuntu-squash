@@ -8,32 +8,32 @@ services:
 env:
   global:
     - BRANCH="master"
+    - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
+    - BUILD_TYPE="iso_extraction"
 
-jobs:
-  include:
-    - stage: Build and deploy
-      if: (NOT (type IN (pull_request))) AND (tag IS blank)
-      script:
-        # Determine ISO version
-        - |
-          export ISO_VERSION=$(curl -sL http://releases.ubuntu.com/18.04/MD5SUMS | grep 'desktop' | grep -Po "(\d+\.)+\d+")
-        - sed -i "s/REPLACE_VERSION/${ISO_VERSION}/g" settings.sh
-        # Build the release contents
-        - mkdir -p buildout
-        - cp settings.sh buildout/settings.sh
-        - docker run --rm -it -v $(pwd)/buildout:/buildout netbootxyz/iso-processor
-      before_deploy:
-        # Set up git user name and tag this commit
-        - git config --local user.name $GIT_USERNAME
-        - git config --local user.email $GIT_EMAIL
-        - export TRAVIS_TAG=${ISO_VERSION}-$(echo ${TRAVIS_COMMIT} | cut -c1-8)-${TRAVIS_JOB_NUMBER}
-        - git tag $TRAVIS_TAG
-      deploy:
-        provider: releases
-        api_key: $GITHUB_TOKEN
-        file_glob: true
-        file: buildout/*
-        skip_cleanup: true
-        on:
-          branch: $BRANCH
+if: type != pull_request AND tag IS blank
+script:
+  - |
+    export EXTERNAL_VERSION=$(curl -sfL http://releases.ubuntu.com/18.04/MD5SUMS | grep 'desktop' | grep -Po "(\d+\.)+\d+")
+  - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
+  - git config --local user.name $GIT_USERNAME
+  - git config --local user.email $GIT_EMAIL
+  - export TRAVIS_TAG=${EXTERNAL_VERSION}-$(echo ${TRAVIS_COMMIT} | cut -c1-8)
+  - ./build.sh compare ${TRAVIS_TAG}
+  - ./build.sh build ${BUILD_TYPE}
+before_deploy:
+# Tag this commit for release
+  - git tag $TRAVIS_TAG
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file_glob: true
+  file: buildout/*
+  skip_cleanup: true
+  on:
+    branch: $BRANCH
+after_deploy:
+  - ./build.sh endpoints $TRAVIS_TAG
+after_success: build.sh discord success
+after_failure: build.sh discord failure
