@@ -14,7 +14,7 @@ env:
 
 branches:
   only:
-    - $BRANCH
+    - 'master'
 if: type != pull_request AND tag IS blank
 script:
   - |
