@@ -23,7 +23,7 @@ script:
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
   - export TRAVIS_TAG=${EXTERNAL_VERSION}-$(echo ${TRAVIS_COMMIT} | cut -c1-8)
-  - ./build.sh compare ${TRAVIS_TAG}
+  - ./build.sh compare ${TRAVIS_TAG} || travis_terminate 0
   - ./build.sh build ${BUILD_TYPE}
 before_deploy:
 # Tag this commit for release
