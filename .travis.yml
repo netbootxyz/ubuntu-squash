@@ -12,6 +12,9 @@ env:
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
+branches:
+  only:
+    - $BRANCH
 if: type != pull_request AND tag IS blank
 script:
   - |
@@ -24,7 +27,7 @@ script:
   - ./build.sh build ${BUILD_TYPE}
 before_deploy:
 # Tag this commit for release
-  - git tag $TRAVIS_TAG
+  - git tag ${TRAVIS_TAG}
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
@@ -35,5 +38,7 @@ deploy:
     branch: $BRANCH
 after_deploy:
   - ./build.sh endpoints $TRAVIS_TAG
-after_success: build.sh discord success
-after_failure: build.sh discord failure
+after_success:
+  - ./build.sh discord success
+after_failure: 
+  - ./build.sh discord failure
