@@ -6,3 +6,4 @@ endpoints:
     os: "ubuntu"
     version: "18.04"
     flavor: "core"
+    kernel: "ubuntu-18.04-live-kernel"
