@@ -3,3 +3,6 @@ endpoints:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
+    os: "ubuntu"
+    version: "18.04"
+    flavor: "core"
