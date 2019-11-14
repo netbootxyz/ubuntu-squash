@@ -1,9 +1,9 @@
 endpoints:
-  ubuntu-18.04-kylin-squash:
+  ubuntu-19.10-kylin-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     os: "ubuntu"
-    version: "18.04"
+    version: "19.10"
     flavor: "kylin"
-    kernel: "ubuntu-18.04-live-kernel"
+    kernel: "ubuntu-19.10-live-kernel"
