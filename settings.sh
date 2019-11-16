@@ -1,4 +1,4 @@
-URL="https://torrent.ubuntu.com/xubuntu/releases/eoan/release/desktop/xubuntu-19.10-desktop-amd64.iso.torrent"
+URL="http://releases.ubuntu.com/eoan/ubuntu-19.10-desktop-amd64.iso.torrent"
 TYPE=torrent
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs"
