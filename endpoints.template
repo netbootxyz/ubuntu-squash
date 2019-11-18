@@ -6,4 +6,4 @@ endpoints:
     os: "ubuntu"
     version: "19.10"
     flavor: "Budgie"
-    kernel: "ubuntu-18.04-live-kernel"
+    kernel: "ubuntu-19.10-live-kernel"
