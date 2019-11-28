@@ -1,9 +1,8 @@
 endpoints:
-  ubuntu-18.04-default-squash:
+  elementaryos-5-default-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
-    os: "ubuntu"
-    version: "18.04"
-    flavor: "Unity"
+    os: "elementary-os"
+    version: "5"
     kernel: "ubuntu-18.04-live-kernel"
