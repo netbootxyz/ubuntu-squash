@@ -1,4 +1,4 @@
-URL="http://releases.ubuntu.com/18.04/ubuntu-REPLACE_VERSION-desktop-amd64.iso.torrent"
-TYPE=torrent
+URL="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/19.10/amd64/intel/REPLACE_VERSION/pop-os_19.10_amd64_intel_REPLACE_VERSION.iso"
+TYPE=file
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+casper_pop-os_19.10_*/filesystem.squashfs|filesystem.squashfs"
