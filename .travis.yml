@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="mint-19.2-cinnamon"
+    - BRANCH="mint-19-cinnamon"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'mint-19.2-cinnamon'
+    - 'mint-19-cinnamon'
 if: type != pull_request AND tag IS blank
 script:
   - |
