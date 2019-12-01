@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="master"
+    - BRANCH="mint-19.2-xfce"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'master'
+    - 'mint-19.2-xfce'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sfL http://releases.ubuntu.com/18.04/MD5SUMS | grep 'desktop' | grep -Po "(\d+\.)+\d+")
+    export EXTERNAL_VERSION=$(curl -sL http://mirrors.evowise.com/linuxmint/stable/ | awk '/19\./ {print $2}' | grep -Po "(\d+\.)+\d+" |tail -1)
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
