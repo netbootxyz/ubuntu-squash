@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="mint-19.2-xfce"
+    - BRANCH="mint-19.2-mate"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'mint-19.2-xfce'
+    - 'mint-19.2-mate'
 if: type != pull_request AND tag IS blank
 script:
   - |
