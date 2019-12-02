@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="zorin-15-gnome"
+    - BRANCH="zorin-15-xfce"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'zorin-15-gnome'
+    - 'zorin-15-xfce'
 if: type != pull_request AND tag IS blank
 script:
   - |
