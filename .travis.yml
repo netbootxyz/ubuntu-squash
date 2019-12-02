@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="ubuntu-default-19.10"
+    - BRANCH="voyager-eoan"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'ubuntu-default-19.10'
+    - 'voyager-eoan'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL http://releases.ubuntu.com/eoan/MD5SUMS | grep "desktop" | cut -c1-8)
+    export EXTERNAL_VERSION="eoan"
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
