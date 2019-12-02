@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="master"
+    - BRANCH="peppermint-10"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'master'
+    - 'peppermint-10'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sfL http://releases.ubuntu.com/18.04/MD5SUMS | grep 'desktop' | grep -Po "(\d+\.)+\d+")
+    export EXTERNAL_VERSION="10"
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
