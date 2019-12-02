@@ -1,9 +1,9 @@
 endpoints:
-  ubuntu-18.04-default-squash:
+  zorin-15-gnome-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
-    os: "ubuntu"
-    version: "18.04"
-    flavor: "Unity"
+    os: "zorin"
+    version: "15"
+    flavor: "GNOME"
     kernel: "ubuntu-18.04-live-kernel"
