@@ -5,5 +5,5 @@ endpoints:
     - filesystem.squashfs
     os: "ubuntu"
     version: "18.04"
-    flavor: "Unity"
+    flavor: "GNOME"
     kernel: "ubuntu-18.04-live-kernel"
