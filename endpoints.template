@@ -5,5 +5,5 @@ endpoints:
     - filesystem.squashfs
     os: "ubuntu"
     version: "19.10"
-    flavor: "Unity"
+    flavor: "GNOME"
     kernel: "ubuntu-19.10-live-kernel"
