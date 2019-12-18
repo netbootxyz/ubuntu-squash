@@ -18,7 +18,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION="10"
+    export EXTERNAL_VERSION=$(curl -sX GET "https://api.github.com/repos/peppermintos/Peppermint-10/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]' | sed 's/10_//g')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
