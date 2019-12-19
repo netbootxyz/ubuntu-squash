@@ -1,4 +1,9 @@
-URL="http://releases.ubuntu.com/18.04/ubuntu-REPLACE_VERSION-desktop-amd64.iso.torrent"
-TYPE=torrent
+URL="https://files.kde.org/neon/images/user/REPLACE_VERSION/neon-user-REPLACE_VERSION.iso"
+TYPE=file
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/initrd|initrd
+casper/vmlinuz|vmlinuz
+casper/filesystem.squashfs"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="xz"

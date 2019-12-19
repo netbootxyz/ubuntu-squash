@@ -1,9 +1,11 @@
 endpoints:
-  ubuntu-18.04-default-squash:
+  kde-neon-user:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
+    - initrd
+    - vmlinuz
     - filesystem.squashfs
-    os: "ubuntu"
+    os: "neon"
     version: "18.04"
-    flavor: "GNOME"
-    kernel: "ubuntu-18.04-live-kernel"
+    flavor: "user"
+    kernel: "kde-neon-user"
