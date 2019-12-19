@@ -1,9 +1,9 @@
 URL="https://files.kde.org/neon/images/user/REPLACE_VERSION/neon-user-REPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
-casper/initrd|initrd
+casper/initrd.lz|initrd.lz
 casper/vmlinuz|vmlinuz
-casper/filesystem.squashfs"
+casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
-INITRD_NAME="initrd"
+INITRD_NAME="initrd.lz"
 INITRD_TYPE="xz"
