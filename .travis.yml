@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="pop-19.10"
+    - BRANCH="pop-19.10-nvidia"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'pop-19.10'
+    - 'pop-19.10-nvidia'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL https://system76.com/pop |awk -F '(19.10_amd64_intel_|.iso)' '/19.10_amd64_intel/ {print $3;exit}')
+    export EXTERNAL_VERSION=$(curl -sL https://system76.com/pop |awk -F '(19.10_amd64_nvidia_|.iso)' '/19.10_amd64_nvidia/ {print $3;exit}')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
