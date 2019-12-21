@@ -1,4 +1,9 @@
 URL="https://downloads.sourceforge.net/project/voyagerlive/Voyager-GE-19.10-amd64.iso"
 TYPE=file
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/filesystem.squashfs|filesystem.squashfs
+casper/initrd|initrd
+casper/vmlinuz|vmlinuz"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="lz4"
