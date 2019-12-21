@@ -2,8 +2,10 @@ endpoints:
   backbox-6-default-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
+    - initrd
+    - vmlinuz
     - filesystem.squashfs
     os: "BackBox"
     version: "6"
     flavor: "default"
-    kernel: "ubuntu-18.04-live-kernel"
+    kernel: "backbox-6-default-squash"

@@ -1,4 +1,9 @@
-URL="https://backbox.lt.mirrors.airvpn.org/backbox-6-desktop-amd64.iso.torrent"
+URL="https://backbox.lt.mirrors.airvpn.org/backbox-REPLACE_VERSION-desktop-amd64.iso.torrent"
 TYPE=torrent
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/filesystem.squashfs|filesystem.squashfs
+casper/initrd|initrd
+casper/vmlinuz|vmlinuz"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="gz"
