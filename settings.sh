@@ -1,4 +1,9 @@
 URL="https://torrents.linuxmint.com/torrents/linuxmint-REPLACE_VERSION-cinnamon-64bit.iso.torrent"
 TYPE=torrent
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/filesystem.squashfs|filesystem.squashfs
+casper/initrd.lz|initrd
+casper/vmlinuz|vmlinuz"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="xz"
