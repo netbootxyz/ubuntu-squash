@@ -2,7 +2,9 @@ endpoints:
   elementaryos-5-default-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
+    - initrd
+    - vmlinuz
     - filesystem.squashfs
     os: "elementary-os"
     version: "5"
-    kernel: "ubuntu-18.04-live-kernel"
+    kernel: "elementaryos-5-default-squash"
