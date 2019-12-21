@@ -1,9 +1,9 @@
-URL="https://files.kde.org/neon/images/user/REPLACE_VERSION/neon-user-REPLACE_VERSION.iso"
+URL="https://downloads.sourceforge.net/project/regolith-linux/regolith-linux-rREPLACE_VERSION/Regolith-RREPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
-casper/initrd.lz|initrd.lz
+casper/initrd|initrd
 casper/vmlinuz|vmlinuz
 casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
-INITRD_NAME="initrd.lz"
+INITRD_NAME="initrd"
 INITRD_TYPE="xz"
