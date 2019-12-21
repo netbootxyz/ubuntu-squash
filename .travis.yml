@@ -10,7 +10,7 @@ env:
     - BRANCH="pop-18.04"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
-    - BUILD_TYPE="iso_extraction"
+    - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
