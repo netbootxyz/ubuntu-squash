@@ -1,4 +1,9 @@
 URL="https://downloads.sourceforge.net/project/zorin-os/15/Zorin-OS-15.1-Core-64-bit.iso"
 TYPE=file
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/filesystem.squashfs|filesystem.squashfs
+casper/initrd.lz4|initrd
+casper/vmlinuz|vmlinuz"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="lz4"
