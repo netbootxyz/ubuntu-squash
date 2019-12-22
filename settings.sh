@@ -1,9 +1,9 @@
-URL="https://downloads.sourceforge.net/project/zorin-os/15/Zorin-OS-15.1-Core-64-bit.iso"
+URL="https://osdn.net/projects/linuxlite/storage/REPLACE_VERSION/linux-lite-REPLACE_VERSION-64bit.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
-casper/initrd.lz4|initrd
+casper/initrd.gz|initrd
 casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="lz4"
+INITRD_TYPE="gz"
