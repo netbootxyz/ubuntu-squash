@@ -2,7 +2,7 @@ endpoints:
   kde-neon-user:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
-    - initrd
+    - initrd.lz
     - vmlinuz
     - filesystem.squashfs
     os: "neon"
