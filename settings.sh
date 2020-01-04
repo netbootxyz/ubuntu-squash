@@ -3,7 +3,7 @@ TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
 casper/initrd.lz|initrd
-casper/vmlinuz.efi|vmlinuz"
+casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
 INITRD_TYPE="gz"
