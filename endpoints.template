@@ -1,5 +1,5 @@
 endpoints:
-  feren-squash:
+  feren-classic-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,4 +7,4 @@ endpoints:
     - vmlinuz
     os: "feren"
     version: "standard"
-    kernel: "feren-squash"
+    kernel: "feren-classic-squash"

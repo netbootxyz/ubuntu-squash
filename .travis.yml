@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="feren"
+    - BRANCH="feren-classic"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'feren'
+    - 'feren-classic'
 if: type != pull_request AND tag IS blank
 script:
   - |
