@@ -6,5 +6,5 @@ endpoints:
     - initrd
     - vmlinuz
     os: "feren"
-    version: "standard"
+    version: "classic"
     kernel: "feren-classic-squash"
