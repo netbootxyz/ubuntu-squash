@@ -1,4 +1,9 @@
-URL="http://releases.ubuntu.com/18.04/ubuntu-REPLACE_VERSION-desktop-amd64.iso.torrent"
-TYPE=torrent
+URL="https://mirrors.gigenet.com/OSDN/clonezilla/71823/clonezilla-live-20191024-eoan-amd64.iso"
+TYPE=file
 CONTENTS="\
-casper/filesystem.squashfs|filesystem.squashfs"
+live/filesystem.squashfs|filesystem.squashfs
+live/initrd.img|initrd
+live/vmlinuz|vmlinuz"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="xz"

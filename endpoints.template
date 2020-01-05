@@ -1,9 +1,11 @@
 endpoints:
-  ubuntu-18.04-default-squash:
+  clonezilla-ubuntu-stable:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
-    os: "ubuntu"
-    version: "18.04"
-    flavor: "GNOME"
-    kernel: "ubuntu-18.04-live-kernel"
+    - initrd
+    - vmlinuz
+    os: "clonezilla"
+    version: "ubuntu"
+    flavor: "stable"
+    kernel: "clonezilla-ubuntu-stable"
