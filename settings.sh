@@ -1,4 +1,4 @@
-URL="https://mirrors.gigenet.com/OSDN/clonezilla/71823/clonezilla-live-20191024-eoan-amd64.iso"
+URL="https://mirrors.gigenet.com/OSDN/clonezilla/72090/clonezilla-live-20191226-eoan-amd64.iso"
 TYPE=file
 CONTENTS="\
 live/filesystem.squashfs|filesystem.squashfs
