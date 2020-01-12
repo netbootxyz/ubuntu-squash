@@ -1,10 +1,11 @@
 endpoints:
-  feren-squash:
+  pureos-gnome:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
-    os: "feren"
-    version: "standard"
-    kernel: "feren-squash"
+    os: "pureos"
+    version: "current"
+    flavor: "gnome"
+    kernel: "pureos-gnome"
