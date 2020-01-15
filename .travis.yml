@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="kodachi-6"
+    - BRANCH="bodhi-5-standard"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'kodachi-6'
+    - 'bodhi-5-standard'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION="6.2"
+    export EXTERNAL_VERSION="5.0.0"
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
