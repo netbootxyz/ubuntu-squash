@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="bodhi-5-standard"
+    - BRANCH="bodhi-5-apppack"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'bodhi-5-standard'
+    - 'bodhi-5-apppack'
 if: type != pull_request AND tag IS blank
 script:
   - |
