@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="pop-18.04"
+    - BRANCH="kodachi-6"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'pop-18.04'
+    - 'kodachi-6'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL https://system76.com/pop |awk -F '(18.04_amd64_intel_|.iso)' '/18.04_amd64_intel/ {print $3;exit}')
+    export EXTERNAL_VERSION="6.2"
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL

@@ -1,11 +1,9 @@
 endpoints:
-  pop-18.04-default-squash:
+  kodachi-6:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
-    os: "pop"
-    version: "18.04"
-    flavor: "intel-amd"
-    kernel: "pop-18.04-default-squash"
+    os: "kodachi"
+    version: "6"
