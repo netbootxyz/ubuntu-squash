@@ -6,7 +6,7 @@ RUN \
 	/modlayer/etc/dhcp/dhclient-enter-hooks.d && \
  mv \
 	/dhclientconfig \
-	/modlayer/etc/dhcp/dhclient-enter-hooks.d/config &&
+	/modlayer/etc/dhcp/dhclient-enter-hooks.d/config && \
  mv \
 	/modlayer/bin \
 	/modlayer/usr/
