@@ -1,10 +1,9 @@
 endpoints:
-  bodhi-5-standard:
+  cain:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
-    os: "bodhi"
-    version: "5"
-    flavor: "standard"
+    os: "cain"
+    version: "11"

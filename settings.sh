@@ -1,8 +1,8 @@
-URL="https://downloads.sourceforge.net/project/bodhilinux/REPLACE_VERSION/bodhi-REPLACE_VERSION-64.iso"
+URL="https://mirror.parrotsec.org/mirrors/parrot/iso/caine/caineREPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
-casper/initrd.lz|initrd
+casper/initrd.gz|initrd
 casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
