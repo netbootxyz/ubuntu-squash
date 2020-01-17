@@ -1,4 +1,4 @@
-URL="https://downloads.sourceforge.net/project/regolith-linux/regolith-linux-rREPLACE_VERSION/Regolith-RREPLACE_VERSION-desktop-amd64.iso"
+URL="https://downloads.sourceforge.net/project/nitruxos/Release/nitrux-stable-amd64_REPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
 casper/initrd|initrd
@@ -6,4 +6,4 @@ casper/vmlinuz|vmlinuz
 casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="xz"
+INITRD_TYPE="lz4"

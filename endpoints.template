@@ -1,11 +1,9 @@
 endpoints:
-  regolith-current:
+  nitrux-stable:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
     - vmlinuz
     - filesystem.squashfs
-    os: "regolith"
-    version: "current"
-    flavor: "ubuntu"
-    kernel: "regolith-current"
+    os: "nitrux"
+    version: "stable"
