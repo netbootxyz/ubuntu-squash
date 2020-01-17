@@ -1,11 +1,9 @@
 endpoints:
-  peppermint-10-default-squash:
+  bootrepair:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
-    os: "peppermint"
-    version: "10"
-    flavor: "LXDE"
-    kernel: "peppermint-10-default-squash"
+    os: "bootrepair"
+    version: "current"

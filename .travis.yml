@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="peppermint-10"
+    - BRANCH="bootrepair"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'peppermint-10'
+    - 'bootrepair'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sX GET "https://api.github.com/repos/peppermintos/Peppermint-10/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]' | sed 's/10_//g')
+    export EXTERNAL_VERSION="current"
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
