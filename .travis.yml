@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="cain"
+    - BRANCH="caine"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'cain'
+    - 'caine'
 if: type != pull_request AND tag IS blank
 script:
   - |

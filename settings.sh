@@ -1,4 +1,4 @@
-URL="https://mirror.parrotsec.org/mirrors/parrot/iso/caine/caineREPLACE_VERSION.iso"
+URL="https://caine.mirror.garr.it/mirrors/caine/caineREPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs

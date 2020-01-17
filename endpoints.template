@@ -1,9 +1,9 @@
 endpoints:
-  cain:
+  caine:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
-    os: "cain"
+    os: "caine"
     version: "11"
