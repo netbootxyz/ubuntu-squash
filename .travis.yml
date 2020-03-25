@@ -18,7 +18,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION="5.0.0"
+    export EXTERNAL_VERSION=$(curl -s https://sourceforge.net/projects/bodhilinux/files/latest/download | awk -F 'bodhi-|-64.iso' '/bodhilinux/ {print $2;exit}')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
