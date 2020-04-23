@@ -1,5 +1,5 @@
 endpoints:
-  ubuntu-20.04-Budgie-squash:
+  ubuntu-20.04-MATE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,5 +7,5 @@ endpoints:
     - vmlinuz
     os: "ubuntu"
     version: "20.04"
-    flavor: "Budgie"
-    kernel: "ubuntu-20.04-Budgie-squash"
+    flavor: "MATE"
+    kernel: "ubuntu-20.04-MATE-squash"
