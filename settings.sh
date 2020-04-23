@@ -1,4 +1,9 @@
-URL="http://releases.ubuntu.com/eoan/ubuntu-19.10-desktop-amd64.iso.torrent"
+URL="http://releases.ubuntu.com/focal/ubuntu-20.04-desktop-amd64.iso.torrent"
 TYPE=torrent
 CONTENTS="\
+casper/vmlinuz|vmlinuz
+casper/initrd|initrd
 casper/filesystem.squashfs|filesystem.squashfs"
+EXTRACT_INITRD="true"
+INITRD_NAME="initrd"
+INITRD_TYPE="lz4"

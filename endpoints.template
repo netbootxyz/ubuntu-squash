@@ -1,9 +1,11 @@
 endpoints:
-  ubuntu-19.10-default-squash:
+  ubuntu-20.04-default-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
+    - initrd
+    - vmlinuz
     os: "ubuntu"
-    version: "19.10"
+    version: "20.04"
     flavor: "GNOME"
-    kernel: "ubuntu-19.10-live-kernel"
+    kernel: "ubuntu-20.04-default-squash"
