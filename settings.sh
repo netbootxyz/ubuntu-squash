@@ -1,4 +1,4 @@
-URL="https://releases.ubuntu.com/20.04/ubuntu-20.04-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/kubuntu/releases/20.04/release/kubuntu-20.04-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz

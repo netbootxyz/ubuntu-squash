@@ -1,5 +1,5 @@
 endpoints:
-  ubuntu-20.04-default-squash:
+  ubuntu-20.04-KDE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,5 +7,5 @@ endpoints:
     - vmlinuz
     os: "ubuntu"
     version: "20.04"
-    flavor: "GNOME"
-    kernel: "ubuntu-20.04-default-squash"
+    flavor: "KDE"
+    kernel: "ubuntu-20.04-KDE-squash"

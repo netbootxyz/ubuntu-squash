@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="ubuntu-default-20.04"
+    - BRANCH="kubuntu-20.04"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'ubuntu-default-20.04'
+    - 'kubuntu-20.04'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL http://releases.ubuntu.com/focal/MD5SUMS | awk -F '(ubuntu-|-desktop-amd6)' '/-desktop-amd6/ {print $2}')
+    export EXTERNAL_VERSION=$(curl -sL http://cdimage.ubuntu.com/kubuntu/releases/20.04/release/MD5SUMS | awk -F '(kubuntu-|-desktop-amd6)' '/-desktop-amd6/ {print $2}')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
