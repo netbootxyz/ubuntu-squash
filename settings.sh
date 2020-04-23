@@ -1,5 +1,5 @@
-URL="http://releases.ubuntu.com/focal/ubuntu-20.04-desktop-amd64.iso.torrent"
-TYPE=torrent
+URL="https://releases.ubuntu.com/20.04/ubuntu-20.04-desktop-amd64.iso"
+TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
 casper/initrd|initrd
