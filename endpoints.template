@@ -1,11 +1,11 @@
 endpoints:
-  voyager-eoan-squash:
+  voyager-focal-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "Voyager"
-    version: "eoan"
-    flavor: "eoan"
-    kernel: "voyager-eoan-squash"
+    version: "focal"
+    flavor: "focal"
+    kernel: "voyager-focal-squash"
