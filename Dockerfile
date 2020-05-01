@@ -1,3 +1,3 @@
-FROM  netbootxyz/mod-layers:ubuntu-19.10
+FROM  netbootxyz/mod-layers:ubuntu-20.04
 COPY /root /
 ENTRYPOINT [ "/build.sh" ]
