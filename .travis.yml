@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="mint-20-cinnamon"
+    - BRANCH="mint-20-xfce"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'mint-20-cinnamon'
+    - 'mint-20-xfce'
 if: type != pull_request AND tag IS blank
 script:
   - |
