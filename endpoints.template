@@ -1,11 +1,11 @@
 endpoints:
-  mint-19-cinnamon-squash:
+  mint-20-cinnamon-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
     - vmlinuz
     - filesystem.squashfs
     os: "mint"
-    version: "19"
+    version: "20"
     flavor: "Cinnamon"
-    kernel: "mint-19-cinnamon-squash"
+    kernel: "mint-20-cinnamon-squash"

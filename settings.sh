@@ -1,9 +1,9 @@
-URL="https://torrents.linuxmint.com/torrents/linuxmint-REPLACE_VERSION-cinnamon-64bit.iso.torrent"
-TYPE=torrent
+URL="http://mirrors.evowise.com/linuxmint/stable/REPLACE_VERSION/linuxmint-REPLACE_VERSION-cinnamon-64bit.iso"
+TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
 casper/initrd.lz|initrd
 casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="xz"
+INITRD_TYPE="lz4"
