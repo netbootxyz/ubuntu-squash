@@ -1,4 +1,4 @@
-URL="http://mirrors.evowise.com/linuxmint/stable/REPLACE_VERSION/linuxmint-REPLACE_VERSION-xfce-64bit.iso"
+URL="http://mirrors.evowise.com/linuxmint/stable/REPLACE_VERSION/linuxmint-REPLACE_VERSION-mate-64bit.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
