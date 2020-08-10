@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/xubuntu/releases/20.04/release/xubuntu-20.04-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/xubuntu/releases/focal/release/xubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
