@@ -18,7 +18,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL http://cdimage.ubuntu.com/lubuntu/releases/20.04/release/MD5SUMS | awk -F '(lubuntu-|-desktop-amd6)' '/-desktop-amd6/ {print $2}')
+    export EXTERNAL_VERSION=$(curl -sL http://cdimage.ubuntu.com/lubuntu/releases/focal/release/ |grep '<title>' | grep -Po "(\d+\.)+\d+")
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
