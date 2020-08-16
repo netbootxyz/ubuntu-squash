@@ -1,4 +1,4 @@
-URL="https://torrent.ubuntu.com/ubuntukylin/releases/bionic/release/desktop/ubuntukylin-REPLACE_VERSION-desktop-amd64.iso.torrent"
-TYPE=torrent
+URL="http://mirror.us.leaseweb.net/ubuntu-cdimage/ubuntukylin/releases/18.04/release/ubuntukylin-REPLACE_VERSION-desktop-amd64.iso"
+TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs"
