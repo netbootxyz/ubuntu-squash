@@ -1,4 +1,4 @@
-URL="https://torrent.ubuntu.com/xubuntu/releases/bionic/release/desktop/xubuntu-REPLACE_VERSION-desktop-amd64.iso.torrent"
-TYPE=torrent
+URL="http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/18.04/release/xubuntu-REPLACE_VERSION-desktop-amd64.iso"
+TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs"
