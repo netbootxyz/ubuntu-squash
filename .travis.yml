@@ -18,7 +18,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL http://mirror.us.leaseweb.net/ubuntu-cdimage/ubuntu-budgie/releases/18.04/release/MD5SUMS | awk '{ print $2}' | grep -Po "(\d+\.)+\d+" | sort | tail -1)
+    export EXTERNAL_VERSION=$(curl -sL http://mirror.us.leaseweb.net/ubuntu-cdimage/ubuntu-budgie/releases/18.04/release/SHA256SUMSr | awk '{ print $2}' | grep -Po "(\d+\.)+\d+" | sort | tail -1)
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
