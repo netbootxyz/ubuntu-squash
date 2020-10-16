@@ -1,0 +1,6 @@
+Comand                                task
+pwd                                   present working directory
+ls                                    list the data
+cd _foldername                        for changing folder directory
+cd ..                                  to back one step loction
+touch _filename                       
