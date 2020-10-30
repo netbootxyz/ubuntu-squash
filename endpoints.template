@@ -1,5 +1,5 @@
 endpoints:
-  ubuntu-20.10-default-squash:
+  ubuntu-20.10-netboot:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,5 +7,5 @@ endpoints:
     - vmlinuz
     os: "ubuntu"
     version: "20.10"
-    flavor: "GNOME"
-    kernel: "ubuntu-20.10-default-squash"
+    flavor: "netboot"
+    kernel: "ubuntu-20.10-netboot"

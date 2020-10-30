@@ -1,9 +1,9 @@
-URL="https://releases.ubuntu.com/groovy/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/ubuntu-server/daily-live/current/groovy-live-server-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
 casper/initrd|initrd
 casper/filesystem.squashfs|filesystem.squashfs"
-EXTRACT_INITRD="true"
+EXTRACT_INITRD="false"
 INITRD_NAME="initrd"
 INITRD_TYPE="lz4"

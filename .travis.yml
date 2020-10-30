@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="ubuntu-default-20.10"
+    - BRANCH="ubuntu-20.10-netboot"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
-    - BUILD_TYPE="initrd_patch"
+    - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'ubuntu-default-20.10'
+    - 'ubuntu-20.10-netboot'
 if: type != pull_request AND tag IS blank
 script:
   - |
