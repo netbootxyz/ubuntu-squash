@@ -7,5 +7,6 @@ endpoints:
     - vmlinuz
     os: "ubuntu"
     version: "20.10"
+    codename: "groovy"
     flavor: "netboot"
     kernel: "ubuntu-20.10-netboot"
