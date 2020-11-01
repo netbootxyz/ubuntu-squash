@@ -1,4 +1,4 @@
-URL="http://releases.ubuntu.com/groovy/ubuntu-20.10-live-server-amd64.iso"
+URL="http://releases.ubuntu.com/groovy/ubuntu-REPLACE_VERSION-live-server-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
