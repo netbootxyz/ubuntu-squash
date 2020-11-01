@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="ubuntu-20.10-netboot"
+    - BRANCH="ubuntu-20.04-netboot"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="iso_extraction"
 
 branches:
   only:
-    - 'ubuntu-20.10-netboot'
+    - 'ubuntu-20.04-netboot'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL http://releases.ubuntu.com/groovy/ |grep '<title>' | grep -Po "(\d+\.)+\d+")
+    export EXTERNAL_VERSION=$(curl -sL http://releases.ubuntu.com/focal/ |grep '<title>' | grep -Po "(\d+\.)+\d+")
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
