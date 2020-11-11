@@ -18,7 +18,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL https://clonezilla.org/downloads/alternative-testing/data_2/CHECKSUMS.TXT | awk -F '(clonezilla-live-|-amd64.iso)' '/clonezilla-live-/ {print $2;exit}')
+    export EXTERNAL_VERSION=$(curl -sL https://clonezilla.org/downloads/alternative-testing/data/CHECKSUMS.TXT | awk -F '(clonezilla-live-|-amd64.iso)' '/clonezilla-live-/ {print $2;exit}')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
