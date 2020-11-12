@@ -18,7 +18,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -sL https://files.kde.org/neon/images/user/20201105-0946/ | awk -F '(neon-user-|.iso)' '/neon-user-/ {print $2;exit}')
+    export EXTERNAL_VERSION=$(curl -sL https://neon.kde.org/download | grep -i iso | head -n 1 | awk -F '/' '{print $7}')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
