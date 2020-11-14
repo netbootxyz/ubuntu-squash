@@ -1,24 +1,22 @@
-sudo: true
-
-language: bash
+language: shell
 
 services:
   - docker
 
 env:
   global:
-    - BRANCH="nitrux-stable"
+    - BRANCH="nitrux-release"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'nitrux-stable'
+    - 'nitrux-release'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -s https://sourceforge.net/projects/nitruxos/files/latest/download | awk -F '(nitrux-stable-amd64_|.iso)' '/nitrux-stable-amd64_/ {print $2;exit}')
+    export EXTERNAL_VERSION=$(curl -s https://sourceforge.net/projects/nitruxos/files/latest/download | awk -F '(nitrux-release-amd64_|.iso)' '/nitrux-release-amd64_/ {print $2;exit}')
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
