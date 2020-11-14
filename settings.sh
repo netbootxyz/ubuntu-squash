@@ -1,4 +1,4 @@
-URL="https://downloads.sourceforge.net/project/nitruxos/Release/nitrux-stable-amd64_REPLACE_VERSION.iso"
+URL="https://sourceforge.net/projects/nitruxos/files/Archive/nitrux-stable-amd64_REPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
 casper/initrd|initrd
