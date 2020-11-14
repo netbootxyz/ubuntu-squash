@@ -1,8 +1,8 @@
-URL="https://sourceforge.net/projects/nitruxos/files/Archive/nitrux-stable-amd64_REPLACE_VERSION.iso"
+URL="https://sourceforge.net/projects/nitruxos/files/Release/nitrux-release-amd64_REPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
-casper/initrd|initrd
-casper/vmlinuz|vmlinuz
+boot/initramfs|initrd
+boot/kernel|vmlinuz
 casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"

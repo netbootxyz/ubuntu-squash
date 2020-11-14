@@ -16,7 +16,7 @@ branches:
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION=$(curl -s https://sourceforge.net/projects/nitruxos/files/latest/download | awk -F '(nitrux-release-amd64_|.iso)' '/nitrux-release-amd64_/ {print $2;exit}')
+    export EXTERNAL_VERSION=$(curl -s https://sourceforge.net/projects/nitruxos/files/Release/ | awk -F '(nitrux-release-amd64_|.iso)' '/nitrux-release-amd64_/ {print $2}' | tail -n 1)
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
