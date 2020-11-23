@@ -7,14 +7,14 @@ services:
 
 env:
   global:
-    - BRANCH="pop-20.04"
+    - BRANCH="pop-20.10"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'pop-20.04'
+    - 'pop-20.10'
 if: type != pull_request AND tag IS blank
 script:
   - |
