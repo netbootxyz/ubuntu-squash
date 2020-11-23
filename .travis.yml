@@ -7,18 +7,18 @@ services:
 
 env:
   global:
-    - BRANCH="pop-20.04-nvidia"
+    - BRANCH="pop-20.10-nvidia"
     - GITHUB_ENDPOINT="netbootxyz/ubuntu-squash"
     - DEBIAN_FRONTEND="noninteractive"
     - BUILD_TYPE="initrd_patch"
 
 branches:
   only:
-    - 'pop-20.04-nvidia'
+    - 'pop-20.10-nvidia'
 if: type != pull_request AND tag IS blank
 script:
   - |
-    export EXTERNAL_VERSION="5"
+    export EXTERNAL_VERSION="2"
   - wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
   - git config --local user.name $GIT_USERNAME
   - git config --local user.email $GIT_EMAIL
