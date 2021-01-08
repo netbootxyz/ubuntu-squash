@@ -6,6 +6,6 @@ endpoints:
     - vmlinuz
     - filesystem.squashfs
     os: "mint"
-    version: "20"
+    version: "20.1"
     flavor: "xfce"
     kernel: "mint-20-xfce-squash"
