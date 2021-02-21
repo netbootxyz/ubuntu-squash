@@ -6,4 +6,4 @@ endpoints:
     - vmlinuz
     - filesystem.squashfs
     os: "nitrux"
-    version: REPLACE_VERSION
+    version: release
