@@ -6,7 +6,7 @@ endpoints:
     - initrd
     - vmlinuz
     os: "ubuntu"
-    version: "REPLACE_VERSION"
+    version: "20.04"
     codename: "focal"
     flavor: "netboot"
     kernel: "ubuntu-20.04-netboot"
