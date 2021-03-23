@@ -1,14 +1,14 @@
-name: kodachi-7
+name: kodachi-8
 
 on:
   push:
     branches:
-      - kodachi-7
+      - kodachi-8
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: kodachi-7
+  BRANCH: kodachi-8
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: kodachi-7
+        ref: kodachi-8
 
     - name: Get SHA of actual branch instead of master
       run: |

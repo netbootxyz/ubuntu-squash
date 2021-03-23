@@ -1,9 +1,9 @@
 endpoints:
-  kodachi-7:
+  kodachi-8:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "kodachi"
-    version: "7"
+    version: "8"
