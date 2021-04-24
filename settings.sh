@@ -1,4 +1,4 @@
-URL="https://releases.ubuntu.com/groovy/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="https://releases.ubuntu.com/hirsute/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
