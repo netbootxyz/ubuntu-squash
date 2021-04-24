@@ -1,14 +1,14 @@
-name: ubuntu-20.10-netboot
+name: ubuntu-21.04-netboot
 
 on:
   push:
     branches:
-      - ubuntu-20.10-netboot
+      - ubuntu-21.04-netboot
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: ubuntu-20.10-netboot
+  BRANCH: ubuntu-21.04-netboot
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: iso_extraction
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ubuntu-20.10-netboot
+        ref: ubuntu-21.04-netboot
 
     - name: Get SHA of actual branch instead of master
       run: |
