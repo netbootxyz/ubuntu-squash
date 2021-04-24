@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/ubuntu-budgie/releases/groovy/release/ubuntu-budgie-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/ubuntu-budgie/releases/hirsute/release/ubuntu-budgie-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
