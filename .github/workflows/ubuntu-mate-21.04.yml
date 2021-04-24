@@ -1,14 +1,14 @@
-name: ubuntu-mate-20.10
+name: ubuntu-mate-21.04
 
 on:
   push:
     branches:
-      - ubuntu-mate-20.10
+      - ubuntu-mate-21.04
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: ubuntu-mate-20.10
+  BRANCH: ubuntu-mate-21.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ubuntu-mate-20.10
+        ref: ubuntu-mate-21.04
 
     - name: Get SHA of actual branch instead of master
       run: |

@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION=$(curl -sL http://cdimage.ubuntu.com/ubuntu-mate/releases/groovy/release/ |grep '<title>' | grep -Po "(\d+\.)+\d+")
+VERSION=$(curl -sL http://cdimage.ubuntu.com/ubuntu-mate/releases/hirsute/release/ |grep '<title>' | grep -Po "(\d+\.)+\d+")
 echo "${VERSION}"
