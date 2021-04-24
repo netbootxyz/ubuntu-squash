@@ -1,11 +1,11 @@
 endpoints:
-  ubuntu-20.10-KDE-squash:
+  ubuntu-21.04-KDE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "ubuntu"
-    version: "20.10"
+    version: "21.04"
     flavor: "KDE"
-    kernel: "ubuntu-20.10-KDE-squash"
+    kernel: "ubuntu-21.04-KDE-squash"
