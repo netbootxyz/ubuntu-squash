@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/lubuntu/releases/focal/release/lubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/lubuntu/releases/hirsute/release/lubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz

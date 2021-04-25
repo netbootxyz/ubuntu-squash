@@ -1,14 +1,14 @@
-name: lubuntu-20.04
+name: lubuntu-21.04
 
 on:
   push:
     branches:
-      - lubuntu-20.04
+      - lubuntu-21.04
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: lubuntu-20.04
+  BRANCH: lubuntu-21.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: lubuntu-20.04
+        ref: lubuntu-21.04
 
     - name: Get SHA of actual branch instead of master
       run: |
