@@ -1,5 +1,5 @@
 endpoints:
-  bodhi-6-standard:
+  bodhi-6-apppack:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,4 +7,4 @@ endpoints:
     - vmlinuz
     os: bodhi
     version: '6'
-    flavor: standard
+    flavor: apppack
