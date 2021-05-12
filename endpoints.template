@@ -1,11 +1,10 @@
 endpoints:
-  peppermint-10-default-squash:
+  bodhi-6-standard:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
-    os: "peppermint"
-    version: "10"
-    flavor: "LXDE"
-    kernel: "peppermint-10-default-squash"
+    os: bodhi
+    version: '6'
+    flavor: standard

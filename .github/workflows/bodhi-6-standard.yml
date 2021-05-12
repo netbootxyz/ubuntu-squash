@@ -1,14 +1,14 @@
-name: peppermint-10
+name: bodhi-6-standard
 
 on:
   push:
     branches:
-      - peppermint-10
+      - bodhi-6-standard
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: peppermint-10
+  BRANCH: bodhi-6-standard
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: peppermint-10
+        ref: bodhi-6-standard
 
     - name: Get SHA of actual branch instead of master
       run: |
