@@ -1,14 +1,14 @@
-name: pop-20.10
+name: pop-21.04
 
 on:
   push:
     branches:
-      - pop-20.10
+      - pop-21.04
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: pop-20.10
+  BRANCH: pop-21.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: pop-20.10
+        ref: pop-21.04
 
     - name: Get SHA of actual branch instead of master
       run: |
