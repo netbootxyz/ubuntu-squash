@@ -11,7 +11,7 @@ env:
   BRANCH: ubuntu-budgie-20.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
-  BUILD_TYPE: iso_extraction
+  BUILD_TYPE: initrd_patch
   DEBIAN_FRONTEND: noninteractive
   CI_TOKEN: ${{ secrets.CI_TOKEN }}
 
