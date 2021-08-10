@@ -1,14 +1,14 @@
-name: elementaryos-5
+name: elementaryos-6
 
 on:
   push:
     branches:
-      - elementaryos-5
+      - elementaryos-6
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: elementaryos-5
+  BRANCH: elementaryos-6
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: elementaryos-5
+        ref: elementaryos-6
 
     - name: Get SHA of actual branch instead of master
       run: |

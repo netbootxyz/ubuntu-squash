@@ -1,4 +1,4 @@
-URL="magnet:?xt=urn:btih:444f6d8b8c3a5363a80216c4e97c7460ad0325bf&dn=elementaryos-5.1-stable.20200501.iso&tr=https%3A%2F%2Fashrise.com%3A443%2Fphoenix%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.ccc.de%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&ws=http://sfo1.dl.elementary.io/download/MTU4ODQ0MzI2Nw==/elementaryos-5.1-stable.20200501.iso"
+URL="magnet:?xt=urn:btih:6def4d028d76c6f02590bb062be4ad5cbf4e76fb&dn=elementaryos-6.0-stable.20210810.iso&tr=https%3A%2F%2Fashrise.com%3A443%2Fphoenix%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&ws=http%3A%2F%2Fams3.dl.elementary.io%2Fdownload%2FMTYyODYxMzU1OA%3D%3D%2Felementaryos-6.0-stable.20210810.iso"
 TYPE=torrent
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
