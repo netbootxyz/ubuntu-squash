@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION="15"
+VERSION="16"
 echo "${VERSION}"

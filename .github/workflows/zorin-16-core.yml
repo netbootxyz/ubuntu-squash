@@ -1,14 +1,14 @@
-name: zorin-15-gnome
+name: zorin-16-core
 
 on:
   push:
     branches:
-      - zorin-15-gnome
+      - zorin-16-core
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: zorin-15-gnome
+  BRANCH: zorin-16-core
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: zorin-15-gnome
+        ref: zorin-16-core
 
     - name: Get SHA of actual branch instead of master
       run: |

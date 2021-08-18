@@ -1,11 +1,11 @@
 endpoints:
-  zorin-15-gnome-squash:
+  zorin-16-core-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "zorin"
-    version: "15"
-    flavor: "GNOME"
-    kernel: "zorin-15-gnome-squash"
+    version: "16"
+    flavor: "Core"
+    kernel: "zorin-16-core-squash"
