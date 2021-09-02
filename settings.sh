@@ -1,4 +1,4 @@
-URL="https://sourceforge.net/projects/nitruxos/files/Release/nitrux-release-amd64_REPLACE_VERSION.iso"
+URL="https://sourceforge.net/projects/nitruxos/files/Release/ISO/nitrux-release-amd64_REPLACE_VERSION.iso"
 TYPE=file
 CONTENTS="\
 boot/initramfs|initrd
