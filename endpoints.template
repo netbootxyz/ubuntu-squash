@@ -6,5 +6,5 @@ endpoints:
     - initrd
     - vmlinuz
     os: "lite"
-    version: "5"
+    version: REPLACE_VERSION
     kernel: "linux-lite-5-squash"
