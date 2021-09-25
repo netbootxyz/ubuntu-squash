@@ -1,4 +1,4 @@
-URL="http://releases.ubuntu.com/focal/ubuntu-REPLACE_VERSION-live-server-amd64.iso"
+URL="https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-REPLACE_VERSION-live-server-arm64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
