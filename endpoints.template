@@ -9,5 +9,5 @@ endpoints:
     version: 'REPLACE_VERSION'
     codename: impish
     flavor: netboot
-    kernel: ubuntu-21.10-netboot-amd64
+    kernel: ubuntu-netboot-21.10-amd64
     arch: amd64
