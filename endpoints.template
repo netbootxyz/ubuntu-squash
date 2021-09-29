@@ -9,5 +9,5 @@ endpoints:
     version: 21.04
     codename: hirsute
     flavor: netboot
-    kernel: ubuntu-21.04-netboot
+    kernel: ubuntu-netboot-21.04-amd64
     arch: amd64
