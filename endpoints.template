@@ -6,8 +6,8 @@ endpoints:
     - initrd
     - vmlinuz
     os: ubuntu
-    version: 21.10
+    version: REPLACE_VERSION
     codename: impish
     flavor: netboot
-    kernel: ubuntu-21.10-netboot
+    kernel: ubuntu-21.10-netboot-amd64
     arch: amd64
