@@ -9,3 +9,4 @@ endpoints:
     version: "REPLACE_VERSION"
     flavor: "stable"
     kernel: "clonezilla-ubuntu-stable-amd64"
+    arch: "amd64"
