@@ -1,11 +1,12 @@
 endpoints:
-  clonezilla-ubuntu-testing:
+  clonezilla-ubuntu-testing-amd64:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "clonezilla"
-    version: "ubuntu"
+    version: "REPLACE_VERSION"
     flavor: "testing"
-    kernel: "clonezilla-ubuntu-testing"
+    kernel: "clonezilla-ubuntu-testing-amd64"
+    arch: "amd64"
