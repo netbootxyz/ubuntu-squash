@@ -1,4 +1,4 @@
-URL="https://downloads.sourceforge.net/project/ferenoslinux/Feren%20OS%20x64.iso"
+URL="https://downloads.sourceforge.net/project/ferenoslinux/Feren-OS-standarddt.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
