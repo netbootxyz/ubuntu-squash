@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/kubuntu/releases/hirsute/release/kubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/kubuntu/releases/impish/release/kubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
