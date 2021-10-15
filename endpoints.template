@@ -1,11 +1,11 @@
 endpoints:
-  ubuntu-21.04-XFCE-squash:
+  ubuntu-21.10-XFCE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "ubuntu"
-    version: "21.04"
+    version: "REPLACE_VERSION"
     flavor: "XFCE"
-    kernel: "ubuntu-21.04-XFCE-squash"
+    kernel: "ubuntu-21.10-XFCE-squash"
