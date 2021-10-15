@@ -1,14 +1,14 @@
-name: ubuntu-budgie-21.04
+name: ubuntu-budgie-21.10
 
 on:
   push:
     branches:
-      - ubuntu-budgie-21.04
+      - ubuntu-budgie-21.10
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: ubuntu-budgie-21.04
+  BRANCH: ubuntu-budgie-21.10
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ubuntu-budgie-21.04
+        ref: ubuntu-budgie-21.10
 
     - name: Get SHA of actual branch instead of master
       run: |
