@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/lubuntu/releases/hirsute/release/lubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/lubuntu/releases/impish/release/lubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
@@ -6,4 +6,4 @@ casper/initrd|initrd
 casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="lz4"
+INITRD_TYPE="zstd"
