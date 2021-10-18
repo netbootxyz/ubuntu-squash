@@ -1,4 +1,4 @@
-URL="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/21.04/amd64/intel/2/pop-os_21.04_amd64_intel_2.iso"
+URL="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/REPLACE_VERSION/amd64/intel/9/pop-os_REPLACE_VERSION_amd64_intel_9.iso"
 TYPE=file
 CONTENTS="\
 casper_pop-os_21.04_*/filesystem.squashfs|filesystem.squashfs

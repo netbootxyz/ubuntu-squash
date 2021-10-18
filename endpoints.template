@@ -6,6 +6,6 @@ endpoints:
     - initrd
     - vmlinuz
     os: "pop"
-    version: "21.04"
+    version: "REPLACE_VERSION"
     flavor: "intel-amd"
     kernel: "pop-21.04-default-squash"
