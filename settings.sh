@@ -6,4 +6,4 @@ casper_pop-os_21.10_*/initrd.gz|initrd
 casper_pop-os_21.10_*/vmlinuz.efi|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="lz4"
+INITRD_TYPE="zstd"
