@@ -1,9 +1,9 @@
-URL="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/21.04/amd64/intel/2/pop-os_21.04_amd64_intel_2.iso"
+URL="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/21.10/amd64/intel/3/pop-os_21.10_amd64_intel_3.iso"
 TYPE=file
 CONTENTS="\
-casper_pop-os_21.04_*/filesystem.squashfs|filesystem.squashfs
-casper_pop-os_21.04_*/initrd.gz|initrd
-casper_pop-os_21.04_*/vmlinuz.efi|vmlinuz"
+casper_pop-os_21.10_*/filesystem.squashfs|filesystem.squashfs
+casper_pop-os_21.10_*/initrd.gz|initrd
+casper_pop-os_21.10_*/vmlinuz.efi|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
 INITRD_TYPE="lz4"
