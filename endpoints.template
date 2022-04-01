@@ -6,6 +6,6 @@ endpoints:
     - initrd
     - vmlinuz
     os: "zorin"
-    version: "16"
+    version: "REPLACE_VERSION"
     flavor: "Core"
     kernel: "zorin-16-core-squash"
