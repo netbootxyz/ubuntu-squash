@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/xubuntu/releases/impish/release/xubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/xubuntu/releases/jammy/release/xubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
