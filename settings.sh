@@ -1,4 +1,4 @@
-URL="https://releases.ubuntu.com/impish/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="https://releases.ubuntu.com/jammy/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz

@@ -1,14 +1,14 @@
-name: ubuntu-default-21.10
+name: ubuntu-default-22.04
 
 on:
   push:
     branches:
-      - ubuntu-default-21.10
+      - ubuntu-default-22.04
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: ubuntu-default-21.10
+  BRANCH: ubuntu-default-22.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ubuntu-default-21.10
+        ref: ubuntu-default-22.04
 
     - name: Get SHA of actual branch instead of master
       run: |
