@@ -1,5 +1,5 @@
 endpoints:
-  ubuntu-21.10-MATE-squash:
+  ubuntu-22.04-MATE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -8,4 +8,4 @@ endpoints:
     os: "ubuntu"
     version: "REPLACE_VERSION"
     flavor: "MATE"
-    kernel: "ubuntu-21.10-MATE-squash"
+    kernel: "ubuntu-22.04-MATE-squash"
