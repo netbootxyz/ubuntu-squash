@@ -1,14 +1,14 @@
-name: ubuntu-kylin-20.04
+name: ubuntu-kylin-22.04
 
 on:
   push:
     branches:
-      - ubuntu-kylin-20.04
+      - ubuntu-kylin-22.04
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: ubuntu-kylin-20.04
+  BRANCH: ubuntu-kylin-22.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ubuntu-kylin-20.04
+        ref: ubuntu-kylin-22.04
 
     - name: Get SHA of actual branch instead of master
       run: |
