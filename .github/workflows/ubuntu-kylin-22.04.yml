@@ -1,17 +1,17 @@
-name: ubuntu-netboot-21.04-arm64
+name: ubuntu-kylin-22.04
 
 on:
   push:
     branches:
-      - ubuntu-netboot-21.04-arm64
+      - ubuntu-kylin-22.04
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: ubuntu-netboot-21.04-arm64
+  BRANCH: ubuntu-kylin-22.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
-  BUILD_TYPE: iso_extraction
+  BUILD_TYPE: initrd_patch
   DEBIAN_FRONTEND: noninteractive
   CI_TOKEN: ${{ secrets.CI_TOKEN }}
 
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ubuntu-netboot-21.04-arm64
+        ref: ubuntu-kylin-22.04
 
     - name: Get SHA of actual branch instead of master
       run: |
