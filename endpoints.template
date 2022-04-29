@@ -1,11 +1,11 @@
 endpoints:
-  voyager-focal-squash:
+  voyager-jammy-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "Voyager"
-    version: "focal"
-    flavor: "focal"
-    kernel: "voyager-focal-squash"
+    version: "jammy"
+    flavor: "jammy"
+    kernel: "voyager-jammy-squash"

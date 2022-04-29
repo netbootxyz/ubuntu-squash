@@ -1,4 +1,4 @@
-URL="https://downloads.sourceforge.net/project/voyagerlive/Voyager-20.04-LTS-amd64.iso"
+URL="https://downloads.sourceforge.net/project/voyagerlive/Voyager-22.04-LTS-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
@@ -6,5 +6,4 @@ casper/initrd|initrd
 casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="lz4"
-LZ4_SINGLE="true"
+INITRD_TYPE="zstd"

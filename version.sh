@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION="focal"
+VERSION="jammy"
 echo "${VERSION}"
