@@ -1,4 +1,4 @@
-URL="https://distro.ibiblio.org/zorinos/REPLACE_VERSION/Zorin-OS-REPLACE_VERSION-Core-64-bit.iso"
+URL="https://distro.ibiblio.org/zorinos/16/Zorin-OS-REPLACE_VERSION-Core-64-bit.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
