@@ -1,5 +1,5 @@
 endpoints:
-  linux-lite-5-squash:
+  linux-lite-6-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,4 +7,4 @@ endpoints:
     - vmlinuz
     os: "lite"
     version: REPLACE_VERSION
-    kernel: "linux-lite-5-squash"
+    kernel: "linux-lite-6-squash"

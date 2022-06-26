@@ -1,14 +1,14 @@
-name: linux-lite-5
+name: linux-lite-6
 
 on:
   push:
     branches:
-      - linux-lite-5
+      - linux-lite-6
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: linux-lite-5
+  BRANCH: linux-lite-6
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: linux-lite-5
+        ref: linux-lite-6
 
     - name: Get SHA of actual branch instead of master
       run: |
