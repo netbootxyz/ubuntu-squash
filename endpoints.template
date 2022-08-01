@@ -1,5 +1,5 @@
 endpoints:
-  mint-20-cinnamon-squash:
+  mint-21-cinnamon-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
@@ -8,4 +8,4 @@ endpoints:
     os: "mint"
     version: "REPLACE_VERSION"
     flavor: "Cinnamon"
-    kernel: "mint-20-cinnamon-squash"
+    kernel: "mint-21-cinnamon-squash"
