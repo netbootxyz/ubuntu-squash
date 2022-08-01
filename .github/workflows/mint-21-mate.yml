@@ -1,14 +1,14 @@
-name: mint-20-mate
+name: mint-21-mate
 
 on:
   push:
     branches:
-      - mint-20-mate
+      - mint-21-mate
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: mint-20-mate
+  BRANCH: mint-21-mate
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: mint-20-mate
+        ref: mint-21-mate
 
     - name: Get SHA of actual branch instead of master
       run: |
