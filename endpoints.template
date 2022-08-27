@@ -6,6 +6,6 @@ endpoints:
     - initrd
     - vmlinuz
     os: "ubuntu"
-    version: "REPLACE_VERSION"
+    version: "22.04"
     flavor: "GNOME"
     kernel: "ubuntu-22.04-default-squash"
