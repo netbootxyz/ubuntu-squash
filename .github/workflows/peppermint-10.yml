@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - peppermint-10
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
