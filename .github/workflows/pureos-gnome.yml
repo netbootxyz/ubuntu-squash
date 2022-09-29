@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - pureos-gnome
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
