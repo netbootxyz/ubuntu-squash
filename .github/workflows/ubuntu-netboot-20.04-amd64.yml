@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - ubuntu-netboot-20.04-amd64
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
