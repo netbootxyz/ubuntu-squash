@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - mint-21-mate
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
