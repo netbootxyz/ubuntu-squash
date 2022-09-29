@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - ubuntu-budgie-18.04
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 

@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - zorin-16-core
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
