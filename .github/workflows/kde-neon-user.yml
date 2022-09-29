@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - kde-neon-user
+    paths-ignore:
+      - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
