@@ -8,4 +8,4 @@ endpoints:
     os: "ubuntu"
     version: "22.10"
     flavor: "MATE"
-    kernel: "ubuntu-22.04-MATE-squash"
+    kernel: "ubuntu-22.10-MATE-squash"
