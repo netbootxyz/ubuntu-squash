@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/ubuntukylin/releases/jammy/release/ubuntukylin-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/ubuntukylin/releases/kinetic/release/ubuntukylin-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
