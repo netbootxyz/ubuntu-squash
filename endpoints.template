@@ -1,11 +1,11 @@
 endpoints:
-  ubuntu-22.04-LXDE-squash:
+  ubuntu-22.10-LXDE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "ubuntu"
-    version: "22.04"
+    version: "22.10"
     flavor: "LXDE"
-    kernel: "ubuntu-22.04-LXDE-squash"
+    kernel: "ubuntu-22.10-LXDE-squash"
