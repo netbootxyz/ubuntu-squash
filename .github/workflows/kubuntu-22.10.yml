@@ -1,16 +1,16 @@
-name: kubuntu-22.04
+name: kubuntu-22.10
 
 on:
   push:
     branches:
-      - kubuntu-22.04
+      - kubuntu-22.10
     paths-ignore:
       - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: kubuntu-22.04
+  BRANCH: kubuntu-22.10
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: kubuntu-22.04
+        ref: kubuntu-22.10
 
     - name: Get SHA of actual branch instead of master
       run: |
