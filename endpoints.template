@@ -1,11 +1,11 @@
 endpoints:
-  ubuntu-22.04-MATE-squash:
+  ubuntu-22.10-MATE-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: "ubuntu"
-    version: "22.04"
+    version: "22.10"
     flavor: "MATE"
     kernel: "ubuntu-22.04-MATE-squash"

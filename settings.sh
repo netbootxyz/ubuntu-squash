@@ -1,4 +1,4 @@
-URL="http://cdimage.ubuntu.com/ubuntu-mate/releases/jammy/release/ubuntu-mate-REPLACE_VERSION-desktop-amd64.iso"
+URL="http://cdimage.ubuntu.com/ubuntu-mate/releases/kinetic/release/ubuntu-mate-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
