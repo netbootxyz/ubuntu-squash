@@ -1,0 +1,91 @@
+name: ubuntu-studio-22.04
+
+on:
+  push:
+    branches:
+      - ubuntu-studio-22.04
+    paths-ignore:
+      - '.github/workflows/**'
+  schedule:
+    - cron: '0 4 * * 6'
+
+env:
+  BRANCH: ubuntu-studio-22.04
+  GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
+  DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
+  BUILD_TYPE: initrd_patch
+  DEBIAN_FRONTEND: noninteractive
+  CI_TOKEN: ${{ secrets.CI_TOKEN }}
+
+jobs:
+  version-checker:
+    name: Version Checker
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: ubuntu-studio-22.04
+
+    - name: Get SHA of actual branch instead of master
+      run: |
+        export GITHUB_SHA=$(git rev-parse HEAD)
+        echo "GITHUB_SHA=$GITHUB_SHA" >> $GITHUB_ENV
+
+    - name: Retrieve latest version from upstream and set vars
+      run: |
+        export EXTERNAL_VERSION=$(sudo bash version.sh)
+        echo "EXTERNAL_VERSION=$EXTERNAL_VERSION" >> $GITHUB_ENV
+        export GITHUB_TAG=${EXTERNAL_VERSION}-$(echo ${{ env.GITHUB_SHA }} | cut -c1-8)
+        echo "GITHUB_TAG=$GITHUB_TAG" >> $GITHUB_ENV
+        wget https://raw.githubusercontent.com/netbootxyz/build-pipelines/master/build.sh && chmod +x build.sh
+
+    - name: Compare tag
+      id: compare
+      run: ./build.sh compare ${{ env.GITHUB_TAG }}
+      continue-on-error: true
+
+    - name: Build if newer tag is available
+      if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
+      run: |
+        ./build.sh build ${{ env.BUILD_TYPE }}
+        git tag ${{ env.GITHUB_TAG }}
+
+    - name: Create Release
+      if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ env.GITHUB_TAG }}
+        release_name: ${{ env.GITHUB_TAG }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Assets
+      if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
+      uses: svenstaro/upload-release-action@v2
+      with:
+        file: buildout/*
+        file_glob: true
+        overwrite: true
+        prerelease: false
+        release_name: ${{ env.GITHUB_TAG }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ env.GITHUB_TAG }}
+
+    - name: Generate endpoints
+      if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
+      run: |
+        git config --global user.name netboot-ci
+        git config --global user.email netboot-ci@netboot.xyz
+        ./build.sh endpoints ${{ env.GITHUB_TAG }}
+
+    - name: Notify Discord on failure
+      if: failure()
+      run: |
+        ./build.sh discord failure
+
+    - name: Notify Discord on completion
+      if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success' && success()
+      run: |
+        ./build.sh discord success
