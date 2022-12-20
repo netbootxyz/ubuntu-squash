@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION="21.1"
+VERSION=$(curl -s https://linuxmint.com/download.php | grep -i "Download Linux Mint" | awk {'print $4'})
 echo "${VERSION}"
