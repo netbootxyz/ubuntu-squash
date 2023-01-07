@@ -50,28 +50,21 @@ jobs:
         ./build.sh build ${{ env.BUILD_TYPE }}
         git tag ${{ env.GITHUB_TAG }}
 
-    - name: Create Release
+    - name: Generate Release Notes
+      run: |
+        echo "Release generated for Branch: **$${{ env.BRANCH }}**" > ${{ github.workspace }}-CHANGELOG.txt
+
+    - name: Create release and upload assets
       if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ env.GITHUB_TAG }}
-        release_name: ${{ env.GITHUB_TAG }}
+        name: ${{ env.GITHUB_TAG }}
         draft: false
         prerelease: false
-
-    - name: Upload Assets
-      if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
-      uses: svenstaro/upload-release-action@v2
-      with:
-        file: buildout/*
-        file_glob: true
-        overwrite: true
-        prerelease: false
-        release_name: ${{ env.GITHUB_TAG }}
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{ env.GITHUB_TAG }}
+        files: buildout/*
+        token: ${{ secrets.GITHUB_TOKEN }}
+        body_path: ${{ github.workspace }}-CHANGELOG.txt
 
     - name: Generate endpoints
       if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
