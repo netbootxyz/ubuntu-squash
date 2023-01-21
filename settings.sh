@@ -6,4 +6,4 @@ boot/kernel|vmlinuz
 casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="zstd"
+INITRD_TYPE="lz4"
