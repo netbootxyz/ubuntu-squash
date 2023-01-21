@@ -1,4 +1,4 @@
-FROM  netbootxyz/mod-layers:ubuntu-18.04
+FROM  ghcr.io/netbootxyz/mod-layers:ubuntu-18.04
 COPY /root /
 RUN \
  mkdir -p /modlayer/usr && \
