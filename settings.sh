@@ -6,4 +6,4 @@ casper/vmlinuz|vmlinuz
 casper/filesystem.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd.lz"
-INITRD_TYPE="lz4"
+INITRD_TYPE="zstd"
