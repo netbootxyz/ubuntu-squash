@@ -6,6 +6,6 @@ endpoints:
     - vmlinuz
     - filesystem.squashfs
     os: "neon"
-    version: "22.04"
+    version: REPLACE_VERSION
     flavor: "user"
     kernel: "kde-neon-user"
