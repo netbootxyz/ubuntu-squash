@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION="6"
+VERSION="7"
 echo "${VERSION}"
