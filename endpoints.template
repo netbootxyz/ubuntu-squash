@@ -1,10 +1,10 @@
 endpoints:
-  elementaryos-6-default-squash:
+  elementaryos-7-default-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
     - vmlinuz
     - filesystem.squashfs
     os: "elementary-os"
-    version: "6"
-    kernel: "elementaryos-6-default-squash"
+    version: "7"
+    kernel: "elementaryos-7-default-squash"
