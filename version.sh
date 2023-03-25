@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION="2021.10"
+VERSION="2023.01"
 echo "${VERSION}"
