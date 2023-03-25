@@ -6,4 +6,4 @@ endpoints:
     - initrd
     - vmlinuz
     os: "caine"
-    version: "11"
+    version: "REPLACE_VERSION"
