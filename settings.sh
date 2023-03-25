@@ -1,4 +1,4 @@
-URL="https://downloads.sourceforge.net/project/linuxkodachi/kodachi-REPLACE_VERSION-64.iso"
+URL="https://downloads.sourceforge.net/project/linuxkodachi/kodachi-REPLACE_VERSION-64-kernel-6.2.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
