@@ -1,5 +1,5 @@
 endpoints:
-  ubuntu-22.10-LXDE-squash:
+  ubuntu-22.10-LXQT-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -7,5 +7,5 @@ endpoints:
     - vmlinuz
     os: "ubuntu"
     version: "22.10"
-    flavor: "LXDE"
-    kernel: "ubuntu-22.10-LXDE-squash"
+    flavor: "LXQT"
+    kernel: "ubuntu-22.10-LXQT-squash"
