@@ -1,4 +1,4 @@
-URL="https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-REPLACE_VERSION-live-server-arm64.iso"
+URL="https://cdimage.ubuntu.com/releases/23.04/release/ubuntu-REPLACE_VERSION-live-server-arm64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
