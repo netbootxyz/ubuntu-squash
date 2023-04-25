@@ -1,4 +1,4 @@
-URL="https://releases.ubuntu.com/kinetic/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
+URL="https://releases.ubuntu.com/lunar/ubuntu-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
