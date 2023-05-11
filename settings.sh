@@ -3,7 +3,7 @@ TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
 casper/initrd|initrd
-casper/minimal.squashfs|minimal.squashfs"
+casper/minimal.standard.live.squashfs|minimal.standard.live.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
 INITRD_TYPE="zstd"
