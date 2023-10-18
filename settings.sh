@@ -2,8 +2,8 @@ URL="https://releases.ubuntu.com/mantic/ubuntu-REPLACE_VERSION-desktop-amd64.iso
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
-casper/initrd.lz|initrd
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/initrd|initrd
+casper/minimal.standard.squashfs|filesystem.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
 INITRD_TYPE="zstd"
