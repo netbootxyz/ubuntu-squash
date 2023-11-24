@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-VERSION="7"
+VERSION="$(curl -sL https://linux.backbox.org/download/ | grep -i File | grep -i iso | awk -F'-' '{print $2}')"
 echo "${VERSION}"

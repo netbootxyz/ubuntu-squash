@@ -1,4 +1,4 @@
-URL="https://backbox.lt.mirrors.airvpn.org/backbox-REPLACE_VERSION-desktop-amd64.iso"
+URL="https://backbox.mirror.garr.it/backbox-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
