@@ -2,8 +2,8 @@ URL="https://backbox.mirror.garr.it/backbox-REPLACE_VERSION-desktop-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
-casper/initrd|initrd
+casper/initrd.gz|initrd
 casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="lz4"
+INITRD_TYPE="zstd"
