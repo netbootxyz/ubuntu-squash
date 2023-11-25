@@ -1,4 +1,4 @@
-URL="https://sourceforge.net/projects/bodhilinux/files/REPLACE_VERSION/bodhi-REPLACE_VERSION-64-hwe.iso.torrent/download"
+URL="https://sourceforge.net/projects/bodhilinux/files/REPLACE_VERSION/bodhi-REPLACE_VERSION-64-apppack.iso.torrent/download"
 TYPE=torrent
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs

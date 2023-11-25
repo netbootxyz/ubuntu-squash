@@ -1,16 +1,16 @@
-name: bodhi-standard
+name: bodhi-apppack
 
 on:
   push:
     branches:
-      - bodhi-standard
+      - bodhi-apppack
     paths-ignore:
       - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: bodhi-standard
+  BRANCH: bodhi-apppack
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: bodhi-standard
+        ref: bodhi-apppack
 
     - name: Get SHA of actual branch instead of master
       run: |
