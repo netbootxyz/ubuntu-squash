@@ -1,9 +1,9 @@
-URL="https://downloads.sourceforge.net/project/bodhilinux/REPLACE_VERSION/bodhi-REPLACE_VERSION-64-hwe.iso"
-TYPE=file
+URL="https://sourceforge.net/projects/bodhilinux/files/REPLACE_VERSION/bodhi-REPLACE_VERSION-64-hwe.iso.torrent"
+TYPE=torrent
 CONTENTS="\
 casper/filesystem.squashfs|filesystem.squashfs
 casper/initrd.gz|initrd
 casper/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="lz4"
+INITRD_TYPE="zstd"

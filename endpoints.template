@@ -1,10 +1,10 @@
 endpoints:
-  bodhi-6-standard:
+  bodhi-standard:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: bodhi
-    version: '6'
+    version: 'REPLACE_VERSION'
     flavor: standard
