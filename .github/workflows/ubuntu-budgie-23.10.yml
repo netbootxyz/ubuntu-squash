@@ -8,6 +8,7 @@ on:
       - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 4'
+  workflow_dispatch:
 
 env:
   BRANCH: ubuntu-budgie-23.10
