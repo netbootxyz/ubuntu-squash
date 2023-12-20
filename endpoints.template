@@ -1,5 +1,5 @@
 endpoints:
-  zorin-16-core-squash:
+  zorin-core-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - filesystem.squashfs
@@ -8,4 +8,4 @@ endpoints:
     os: "zorin"
     version: "REPLACE_VERSION"
     flavor: "Core"
-    kernel: "zorin-16-core-squash"
+    kernel: "zorin-core-squash"

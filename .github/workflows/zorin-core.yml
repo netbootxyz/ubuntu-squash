@@ -1,16 +1,16 @@
-name: zorin-16-core
+name: zorin-core
 
 on:
   push:
     branches:
-      - zorin-16-core
+      - zorin-core
     paths-ignore:
       - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 4'
 
 env:
-  BRANCH: zorin-16-core
+  BRANCH: zorin-core
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: zorin-16-core
+        ref: zorin-core
 
     - name: Get SHA of actual branch instead of master
       run: |
