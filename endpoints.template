@@ -2,7 +2,6 @@ endpoints:
   ubuntu-netboot-23.10-arm64:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
-    - filesystem.squashfs
     - initrd
     - vmlinuz
     os: ubuntu
