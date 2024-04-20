@@ -2,8 +2,7 @@ URL="https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-REPLACE_VERSION-li
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
-casper/initrd|initrd
-casper/filesystem.squashfs|filesystem.squashfs"
+casper/initrd|initrd"
 EXTRACT_INITRD="false"
 INITRD_NAME="initrd"
 INITRD_TYPE="lz4"
