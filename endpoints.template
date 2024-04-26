@@ -1,12 +1,12 @@
 endpoints:
-  ubuntu-netboot-23.10-amd64:
+  ubuntu-netboot-24.04-amd64:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
     - vmlinuz
     os: ubuntu
     version: 'REPLACE_VERSION'
-    codename: mantic
+    codename: noble
     flavor: netboot
-    kernel: ubuntu-netboot-23.10-amd64
+    kernel: ubuntu-netboot-24.04-amd64
     arch: amd64
