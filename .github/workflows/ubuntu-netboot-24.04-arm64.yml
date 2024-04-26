@@ -1,9 +1,9 @@
-name: ubuntu-netboot-23.10-arm64
+name: ubuntu-netboot-24.04-arm64
 
 on:
   push:
     branches:
-      - ubuntu-netboot-23.10-arm64
+      - ubuntu-netboot-24.04-arm64
     paths-ignore:
       - '.github/workflows/**'
   schedule:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  BRANCH: ubuntu-netboot-23.10-arm64
+  BRANCH: ubuntu-netboot-24.04-arm64
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: iso_extraction
@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: ubuntu-netboot-23.10-arm64
+        ref: ubuntu-netboot-24.04-arm64
 
     - name: Get SHA of actual branch instead of master
       run: |
