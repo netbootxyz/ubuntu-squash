@@ -1,9 +1,9 @@
-name: ubuntu-default-23.10
+name: ubuntu-default-24.04
 
 on:
   push:
     branches:
-      - ubuntu-default-23.10
+      - ubuntu-default-24.04
     paths-ignore:
       - '.github/workflows/**'
   schedule:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  BRANCH: ubuntu-default-23.10
+  BRANCH: ubuntu-default-24.04
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: ubuntu-default-23.10
+        ref: ubuntu-default-24.04
 
     - name: Get SHA of actual branch instead of master
       run: |
