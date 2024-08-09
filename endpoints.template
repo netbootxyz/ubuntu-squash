@@ -1,5 +1,5 @@
 endpoints:
-  mint-21-xfce-squash:
+  mint-22-xfce-squash:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
@@ -8,4 +8,4 @@ endpoints:
     os: "mint"
     version: "REPLACE_VERSION"
     flavor: "xfce"
-    kernel: "mint-21-xfce-squash"
+    kernel: "mint-22-xfce-squash"
