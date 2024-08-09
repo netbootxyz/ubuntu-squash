@@ -1,16 +1,16 @@
-name: mint-21-xfce
+name: mint-xfce
 
 on:
   push:
     branches:
-      - mint-21-xfce
+      - mint-xfce
     paths-ignore:
       - '.github/workflows/**'
   schedule:
     - cron: '0 4 * * 6'
 
 env:
-  BRANCH: mint-21-xfce
+  BRANCH: mint-xfce
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: mint-21-xfce
+        ref: mint-xfce
 
     - name: Get SHA of actual branch instead of master
       run: |
