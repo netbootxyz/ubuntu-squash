@@ -1,9 +1,9 @@
-name: mint-21-mate
+name: mint-22-mate
 
 on:
   push:
     branches:
-      - mint-21-mate
+      - mint-22-mate
     paths-ignore:
       - '.github/workflows/**'
   schedule:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  BRANCH: mint-21-mate
+  BRANCH: mint-22-mate
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
   BUILD_TYPE: initrd_patch
@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: mint-21-mate
+        ref: mint-22-mate
 
     - name: Get SHA of actual branch instead of master
       run: |
