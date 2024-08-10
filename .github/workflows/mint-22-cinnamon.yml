@@ -1,9 +1,9 @@
-name: ubuntu-netboot-23.10-arm64
+name: mint-22-cinnamon
 
 on:
   push:
     branches:
-      - ubuntu-netboot-23.10-arm64
+      - mint-22-cinnamon
     paths-ignore:
       - '.github/workflows/**'
   schedule:
@@ -11,10 +11,10 @@ on:
   workflow_dispatch:
 
 env:
-  BRANCH: ubuntu-netboot-23.10-arm64
+  BRANCH: mint-22-cinnamon
   GITHUB_ENDPOINT: netbootxyz/ubuntu-squash
   DISCORD_HOOK_URL: ${{ secrets.DISCORD_HOOK_URL }}
-  BUILD_TYPE: iso_extraction
+  BUILD_TYPE: initrd_patch
   DEBIAN_FRONTEND: noninteractive
   CI_TOKEN: ${{ secrets.CI_TOKEN }}
 
@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: ubuntu-netboot-23.10-arm64
+        ref: mint-22-cinnamon
 
     - name: Get SHA of actual branch instead of master
       run: |
