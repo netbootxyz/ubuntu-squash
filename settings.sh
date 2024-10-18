@@ -1,4 +1,4 @@
-URL="http://releases.ubuntu.com/noble/ubuntu-REPLACE_VERSION-live-server-amd64.iso"
+URL="http://releases.ubuntu.com/oracular/ubuntu-REPLACE_VERSION-live-server-amd64.iso"
 TYPE=file
 CONTENTS="\
 casper/vmlinuz|vmlinuz
