@@ -5,7 +5,7 @@ casper/vmlinuz|vmlinuz
 casper/initrd|initrd
 casper/minimal.standard.live.squashfs|minimal.standard.live.squashfs
 casper/minimal.standard.squashfs|minimal.standard.squashfs
-minimal.squashfs|minimal.squashfs"
+casper/minimal.squashfs|minimal.squashfs"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
 INITRD_TYPE="zstd"
