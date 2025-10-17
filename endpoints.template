@@ -1,12 +1,12 @@
 endpoints:
-  ubuntu-netboot-25.04-arm64:
+  ubuntu-netboot-25.10-arm64:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
     - vmlinuz
     os: ubuntu
     version: 'REPLACE_VERSION'
-    codename: plucky
+    codename: questing
     flavor: netboot
-    kernel: ubuntu-netboot-25.04-arm64
+    kernel: ubuntu-netboot-25.10-arm64
     arch: arm64
