@@ -17,9 +17,10 @@ The repository uses a **branch-per-variant** pattern. Each branch is independent
    - `README.md` - Basic repository information
 
 2. **GitHub Workflows** (in `.github/workflows/`)
-   - Each branch contains its own workflow file
+   - **IMPORTANT**: Workflow files MUST exist on the master branch for GitHub Actions to discover them
+   - Workflows can optionally also exist on individual branches for reference
    - Workflow filename matches the branch name (e.g., `ubuntu-netboot-25.10-amd64.yml`)
-   - Workflows are stored in the branch they build, not on master
+   - Even though workflows run on specific branches, GitHub requires them on master for discovery
 
 ### Branch Naming Convention
 
@@ -181,31 +182,55 @@ URL="https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-REPLACE_VERSION-li
 VERSION=$(curl -sL https://cdimage.ubuntu.com/releases/25.10/release/ |grep '<title>' | grep -Po "(\d+\.)+\d+")
 ```
 
-### 3. Create Workflow Files (in each branch)
+### 3. Create Workflow Files on Master Branch
 
-**On the ubuntu-netboot-25.10-amd64 branch:**
+**CRITICAL**: Workflow files must be added to the master branch for GitHub Actions to discover them.
 
-Create `.github/workflows/ubuntu-netboot-25.10-amd64.yml` based on the previous version's workflow, updating:
-- Workflow name to `ubuntu-netboot-25.10-amd64`
-- Branch references to `ubuntu-netboot-25.10-amd64`
-- Environment variable `BRANCH` to `ubuntu-netboot-25.10-amd64`
+**On the master branch:**
 
-**On the ubuntu-netboot-25.10-arm64 branch:**
+Create both workflow files:
+- `.github/workflows/ubuntu-netboot-25.10-amd64.yml`
+- `.github/workflows/ubuntu-netboot-25.10-arm64.yml`
 
-Create `.github/workflows/ubuntu-netboot-25.10-arm64.yml` with the same pattern for arm64
+Based on the previous version's workflows (e.g., 24.10), update:
+- Workflow name to match the new branch (e.g., `ubuntu-netboot-25.10-amd64`)
+- Branch references in the `on.push.branches` and `checkout` steps
+- Environment variable `BRANCH` to match the new branch name
+
+**Optionally** (for reference): You can also add these workflow files to the individual branches, but they must be on master to actually run
 
 ### 4. Commit and Push All Changes
 
-**For each branch:**
+**Step 1: Push workflow files from master:**
+```bash
+# On master branch
+git add .github/workflows/ubuntu-netboot-25.10-amd64.yml .github/workflows/ubuntu-netboot-25.10-arm64.yml
+git commit -m "Add workflows for Ubuntu 25.10 netboot builds"
+git push origin master
+```
+
+**Step 2: Push configuration changes from each branch:**
 ```bash
 # On ubuntu-netboot-25.10-amd64 branch
-git add settings.sh version.sh endpoints.template .github/workflows/ubuntu-netboot-25.10-amd64.yml
+git add settings.sh version.sh endpoints.template
 git commit -m "Add Ubuntu 25.10 (questing) amd64 netboot support"
 git push origin ubuntu-netboot-25.10-amd64
 
 # On ubuntu-netboot-25.10-arm64 branch
-git add settings.sh version.sh endpoints.template .github/workflows/ubuntu-netboot-25.10-arm64.yml
+git add settings.sh version.sh endpoints.template
 git commit -m "Add Ubuntu 25.10 (questing) arm64 netboot support"
+git push origin ubuntu-netboot-25.10-arm64
+```
+
+**Step 3: Trigger initial builds:**
+```bash
+# Push empty commits to trigger CI (workflows ignore .github/workflows/** changes)
+git checkout ubuntu-netboot-25.10-amd64
+git commit --allow-empty -m "Trigger initial CI build"
+git push origin ubuntu-netboot-25.10-amd64
+
+git checkout ubuntu-netboot-25.10-arm64
+git commit --allow-empty -m "Trigger initial CI build"
 git push origin ubuntu-netboot-25.10-arm64
 ```
 
@@ -239,7 +264,8 @@ Workflows use the following GitHub secrets:
 
 - Workflows run weekly to automatically detect new point releases
 - Each branch is independent; changes to one variant don't affect others
-- Each branch contains its own workflow file (not stored on master)
-- The master branch primarily holds documentation (claude.md, README.md)
+- **Workflow files MUST be on master** for GitHub Actions to discover them
+- The master branch holds workflow definitions and documentation
+- Configuration files (settings.sh, version.sh, endpoints.template) live on individual branches
 - Releases are immutable; each version gets its own tagged release
 - Failed builds trigger Discord notifications for quick response
