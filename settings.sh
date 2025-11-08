@@ -6,4 +6,4 @@ live/initrd.img|initrd
 live/vmlinuz|vmlinuz"
 EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
-INITRD_TYPE="xz"
+INITRD_TYPE="zstd"
