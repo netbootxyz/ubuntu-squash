@@ -1,9 +1,9 @@
-URL="https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_alternative/20251017-questing/clonezilla-live-20251017-questing-amd64.iso"
+URL="https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_alternative/REPLACE_VERSION/clonezilla-live-REPLACE_VERSION-amd64.iso"
 TYPE=file
 CONTENTS="\
 live/filesystem.squashfs|filesystem.squashfs
 live/initrd.img|initrd
 live/vmlinuz|vmlinuz"
-EXTRACT_INITRD="false"
+EXTRACT_INITRD="true"
 INITRD_NAME="initrd"
 INITRD_TYPE="zstd"
