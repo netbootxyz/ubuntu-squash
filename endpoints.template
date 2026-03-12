@@ -1,5 +1,5 @@
 endpoints:
-  ubuntu-netboot-24.04-arm64:
+  ubuntu-netboot-hwe-24.04-arm64:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
@@ -7,6 +7,6 @@ endpoints:
     os: ubuntu
     version: 'REPLACE_VERSION'
     codename: noble
-    flavor: netboot
-    kernel: ubuntu-netboot-24.04-arm64
+    flavor: netboot-hwe
+    kernel: ubuntu-netboot-hwe-24.04-arm64
     arch: arm64
