@@ -1,12 +1,12 @@
 endpoints:
-  ubuntu-netboot-25.10-amd64:
+  ubuntu-netboot-26.04-amd64:
     path: /ubuntu-squash/releases/download/REPLACE_RELEASE_NAME/
     files:
     - initrd
     - vmlinuz
     os: ubuntu
     version: 'REPLACE_VERSION'
-    codename: questing
+    codename: resolute
     flavor: netboot
-    kernel: ubuntu-netboot-25.10-amd64
+    kernel: ubuntu-netboot-26.04-amd64
     arch: amd64
