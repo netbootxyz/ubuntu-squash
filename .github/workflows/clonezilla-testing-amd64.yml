@@ -23,7 +23,7 @@ jobs:
     name: Version Checker
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         ref: clonezilla-testing-amd64
 
@@ -57,7 +57,7 @@ jobs:
 
     - name: Create release and upload assets
       if: steps.compare.outcome == 'success' && steps.compare.conclusion == 'success'
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       with:
         tag_name: ${{ env.GITHUB_TAG }}
         name: ${{ env.GITHUB_TAG }}
